@@ -3,13 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&display=swap"
+            rel="stylesheet">
     <title>Forms</title>
+    <style>
+        form{
+            width: 30%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;            padding: 25px 16px;
+            font-family: 'Raleway', sans-serif;
+        }
+        input{
+            width: 100%;
+            margin-bottom: 16px;
+            padding: 10px 12px;
+            box-sizing: border-box;
+            border: 1px solid rgb(71, 88, 167);
+
+        }
+        input:focus{
+            outline: none;
+            border: 2px solid rgb(18, 27, 65);
+        }
+        button{
+            width: 100%;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background: rgb(207, 158, 67);
+            color: white;
+            border: none;
+            transition: background 0.2s ease-in-out;
+        }
+        button:hover{
+            background: rgb(226, 162, 42);
+        }
+        @media screen and (max-width:600px){
+            form{
+                width: 90%;
+            }
+        }
+        @media  screen and (601px <= width <= 800px) {
+            form{
+                width: 70%;
+            }
+        }
+    </style>
 </head>
 <body>
     <form action="">
         <div>
             <label for="">Name</label>
+            <input type="text" required minlength="6" placeholder="John Doe">
         </div>
+        <div>
+            <label for="">Email</label>
+            <input type="email" required placeholder="example@gmail.com"></div>
+            <div>
+                <label for="">Date of Birth</label>
+                <input type="date" min="1990/01/01" max="2006/12/31"></div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" placeholder="Strong Password"></div>
+            <div>
+                <label for="">Weight</label>
+                <input type="number" placeholder="58"></div>
+                <button>Submit</button>
     </form>
 </body>
 </html>
